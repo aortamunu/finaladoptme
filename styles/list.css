@@ -1,0 +1,120 @@
+.title {
+  text-align: right;
+  color: rgba(255, 255, 255, 0.795);
+}
+.data-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.5em;
+}
+.sidebar {
+  flex: 1 1 25%;
+  background-color: #e1c9fd;
+  height: 60vh;
+  padding: 1rem;
+  border-radius: 5px;
+}
+.helplist-container,
+.related-helps {
+  flex: 1 1 75%;
+  height: 75vh;
+  min-width: 60%;
+  background-color: transparent;
+  border-radius: 5px;
+  overflow-y: scroll;
+  padding: 0px 0px 0px 1rem;
+}
+.form-section {
+  flex: 1 1 50%;
+  min-width: 50%;
+}
+.render-section {
+  min-width: 50%;
+  flex: 1 1 50%;
+}
+.help-item {
+  min-height: 10vh;
+  background-color: #e1c9fd;
+  margin: 1vh;
+  padding: 1vh;
+  border-radius: 5px;
+}
+.help-meta {
+  font-style: italic;
+  text-align: right;
+  color: var(--meta);
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+}
+.search-input {
+  margin: 1vh 0px;
+  padding: 0px 10px 0px 10px;
+}
+.search-btn {
+  background-color: #9239f9;
+  color: white;
+  font-size: medium;
+}
+.search-btn:active {
+  background-color: var(--primary-btn-active);
+}
+
+@media screen and (max-width: 1100px) {
+  .sidebar {
+    padding: 5px;
+    margin-right: 0px;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .data-section {
+    flex-direction: column;
+  }
+  .sidebar {
+    position: unset;
+  }
+  .helplist-container {
+    padding-left: unset;
+    width: unset;
+    margin-top: 10px;
+  }
+}
+
+.pagination-btn {
+  color: white;
+  background-color: #e1c9fd;
+  border-radius: 50px;
+  padding: 5px 5px;
+  margin: 10px 10px;
+}
+.pagination-btn:hover {
+  /* background-color: #d4b1fb; */
+  box-shadow: 0px 0px 5px var(--focus-light), 0 0 5px var(--focus-light),
+    0 0 5px var(--focus-light);
+  outline: none;
+}
+.pagination-btn:focus {
+  background-color: #cea5fd;
+  box-shadow: 0px 0px 5px var(--focus-light), 0 0 5px var(--focus-light),
+    0 0 5px var(--focus-light);
+  outline: none;
+}
+
+.help-title > * {
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.related-helps {
+  max-width: 35ch;
+  min-width: 35ch;
+}
+
+.related-helps h3,
+.related-helps a {
+  font-size: 15px;
+}
