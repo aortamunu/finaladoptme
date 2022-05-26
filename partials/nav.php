@@ -1,6 +1,6 @@
 <nav>
     <div class="nav-site-title">
-        <a href="/" class="nav-site-title">
+        <a href="./index.php" class="nav-site-title">
             <div class="logo">
                 <?php
                 include './public/logo.svg'

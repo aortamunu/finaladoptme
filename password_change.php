@@ -35,12 +35,12 @@ if (isset($_POST['submitBtn'])) {
                 <hr><br>
                 <form action="./password_change.php" method="post" class="">
                     <div class="form-item">
-                        <label for="old_password">Old Password:</label><br>
+                        <label for="old_password">Old Password</label><br>
                         <input type="password" name="old_password" id="old_password" placeholder="your-old-password" required><br>
                         <small id='old_password-error' class='text-error'></small>
                     </div>
                     <div class="form-item">
-                        <label for="password">New Password:</label><br>
+                        <label for="password">New Password</label><br>
                         <input type="password" name="password" id="password" placeholder="your-new-password" required><br>
                         <small id='password-error' class='text-error'></small>
                     </div>

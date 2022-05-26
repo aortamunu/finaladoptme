@@ -99,7 +99,7 @@ endif;
     <link rel="stylesheet" href="./styles/nav.css">
     <link rel="stylesheet" href="./styles/list.css">
     <link rel="shortcut icon" href="./public/favicon.png" type="image/x-icon">
-    <title>Adopt Me |Post New Pet </title>
+    <title>Adopt Me |New Post </title>
     <style>
         #create-help-description {
             display: none;
@@ -141,7 +141,7 @@ endif;
                     <label for="create-help-title">Name</label><br>
                     <input type="text" placeholder="" id='create-help-title' class='' name="title" required><br>
 
-                    <label for="create-help-image">Image:</label><br>
+                    <label for="create-help-image">Image</label><br>
                     <input type="file" id="create-help-image" name="petImage" required />
 
 
@@ -161,16 +161,16 @@ endif;
                     <textarea id="create-help-description" placeholder="Description about pet..." name='description' class='textarea' required></textarea><br>
                     <div id="ckeditor"></div>
 
-                    <label for="create-help-location">Location:</label><br>
-                    <input type="text" placeholder="Help location" id='create-help-location' class='' name="location" required><br>
+                    <label for="create-help-location">Location</label><br>
+                    <input type="text" placeholder="Location" id='create-help-location' class='' name="location" required><br>
 
-                    <label for="create-help-contact">Contact:</label><br>
-                    <input type="number" placeholder="Helper contact number" id='create-help-contact' class='' name="contact" required><br>
+                    <label for="create-help-contact">Contact</label><br>
+                    <input type="number" placeholder="Contact number" id='create-help-contact' class='' name="contact" required><br>
 
-                    <label for="create-help-active">Active:</label><br>
+                    <label for="create-help-active">Available</label><br>
                     <input type="checkbox" id='create-help-active' class='' value="1" name="active"><br>
 
-                    <button type="submit" value="submit" name="post_help" class="btn btn-login">Post Help</button>
+                    <button type="submit" value="submit" name="post_help" class="btn btn-login">POST</button>
                 </form>
             </div>
 

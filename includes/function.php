@@ -25,7 +25,7 @@ function createUser($email = NULL, $password = NULL)
         if (isset($_SESSION['user'])) :
             $_SESSION['message'] = array('type' => 'success', 'msg' => 'Successfully added a new user');
         else :
-            $_SESSION['message'] = array('type' => 'success', 'msg' => 'You have successfully create a new user, once approved you can log in here.');
+            $_SESSION['message'] = array('type' => 'success', 'msg' => 'You have successfully created a new user, once approved you can log in here.');
             header('Location: /login.php');
         endif;
         exit();
@@ -177,7 +177,7 @@ function createPetDonation($title = NULL, $description = NULL, $location = NULL,
 
                 $sql->execute();
                 if ($sql->affected_rows > 0) {
-                    $_SESSION['message'] = array('type' => 'success', 'msg' => 'You have created new pet donation!');
+                    $_SESSION['message'] = array('type' => 'success', 'msg' => 'You have created new post!');
                 }
             } else {
                 $error_msg = "Not uploaded because of error #" . $image["error"];
@@ -186,10 +186,10 @@ function createPetDonation($title = NULL, $description = NULL, $location = NULL,
                 $_SESSION['message'] = array('type' => 'danger', 'msg' => $error_msg);
             }
         } else {
-            $_SESSION['message'] = array('type' => 'danger', 'msg' => 'Please upload valid pet image!');
+            $_SESSION['message'] = array('type' => 'danger', 'msg' => 'Please upload valid image!');
         }
     } else {
-        $_SESSION['message'] = array('type' => 'danger', 'msg' => 'Pet image not provided!');
+        $_SESSION['message'] = array('type' => 'danger', 'msg' => 'image not provided!');
     }
 
     header('Location: /my-helps.php');
@@ -205,9 +205,9 @@ function updatePetDonation($id = NULL, $title = NULL, $description = NULL, $loca
     $sql->bind_param('sssiiii', $title, $description, $location, $contact, $category, $active, $id);
     $sql->execute();
     if ($sql->affected_rows === 0) :
-        $_SESSION['message'] = array('type' => 'danger', 'msg' => 'Error updating pet donation!');
+        $_SESSION['message'] = array('type' => 'danger', 'msg' => 'Error updating post!');
     else :
-        $_SESSION['message'] = array('type' => 'success', 'msg' => 'Successfully update the selected pet donation.');
+        $_SESSION['message'] = array('type' => 'success', 'msg' => 'Successfully updated the selected post.');
     endif;
     $sql->close();
     header('Location: /update-help.php?help_id=' . $id);
@@ -220,9 +220,9 @@ function deletePetDonation($id = NULL)
     $sql->bind_param('i', $id);
     $sql->execute();
     if ($sql->affected_rows === 0) :
-        $_SESSION['message'] = array('type' => 'danger', 'msg' => 'Error deleting pet donation!');
+        $_SESSION['message'] = array('type' => 'danger', 'msg' => 'Error deleting post!');
     else :
-        $_SESSION['message'] = array('type' => 'success', 'msg' => 'Successfully deleted the selected pet donation.');
+        $_SESSION['message'] = array('type' => 'success', 'msg' => 'Successfully deleted the selected post.');
     endif;
     $sql->close();
     header('Location: /my-helps.php');

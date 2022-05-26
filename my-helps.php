@@ -13,7 +13,7 @@ include "./includes/authentication_required.php";
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/nav.css">
     <link rel="stylesheet" href="./styles/list.css">
-    <title>Adopt Me | My Helps</title>
+    <title>Adopt Me | My Posts</title>
 </head>
 
 <body>
@@ -21,7 +21,7 @@ include "./includes/authentication_required.php";
     <div class="container">
         <?php include './partials/message.php'; ?>
         <div class="title">
-            <h1>My helps</h1>
+            <h1>My posts</h1>
         </div>
         <div class="data-section">
             <div class="sidebar">

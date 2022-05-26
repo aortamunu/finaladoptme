@@ -29,25 +29,25 @@ endif
                 <hr><br>
                 <form action="./register.php" method="post" class="">
                     <div class="form-item">
-                        <label for="email">Email:</label><br>
+                        <label for="email">Email</label><br>
                         <input type="email" name="email" id="email" placeholder="example@email.com" autofocus required><br>
                         <!-- <small class='text-error'>Email not verified!</small> -->
                     </div>
                     <div class="form-item">
-                        <label for="password1">Password:</label><br>
-                        <input type="password" name="password" id="password1" placeholder="your-password" required><br>
+                        <label for="password1">Password</label><br>
+                        <input type="password" name="password" id="password1" placeholder="your password" required><br>
                         <small id='password1-error' class='text-error'></small>
                     </div>
                     <div class="form-item">
-                        <label for="password2">Confirm Password:</label><br>
-                        <input type="password" name="password2" id="password2" placeholder="your-password-again" required><br>
+                        <label for="password2">Confirm Password</label><br>
+                        <input type="password" name="password2" id="password2" placeholder="password again" required><br>
                         <small id='password2-error' class='text-error'></small>
                     </div>
                     <br>
                     <div class="form-item">
                         <button type="submit" name='registerBtn' id='registerBtn' class="btn btn-login" disabled>Sign Up</button>
                     </div>
-                    <small><a href="./login.php">Already Have an account?</a></small>
+                    <small><a href="./login.php">Already registered?</a></small>
                 </form>
             </div>
         </div>

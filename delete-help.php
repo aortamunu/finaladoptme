@@ -33,7 +33,7 @@ endif;
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/nav.css">
     <link rel="stylesheet" href="./styles/list.css">
-    <title>Adopt Me | Delete Donation</title>
+    <title>Adopt Me | Delete Post</title>
 </head>
 
 <body>
@@ -41,15 +41,15 @@ endif;
     <div class="container">
         <?php include './partials/message.php'; ?>
         <div class="title">
-            <h1>Delete Donation: <?= $help->title ?></h1>
+            <h1>Delete Post: <?= $help->title ?></h1>
         </div>
         <div class="data-section">
             <div class="helplist-container">
                 <form class="help-item" method="post" action="./delete-help.php?help_id=<?= $help_id ?>" id='createHelpForm' name='createHelpForm'>
-                    <h1>Are you sure you want to delete this donation?</h1>
-                    <small><i>This action is irreversable.</i></small>
+                    <h1>Are you sure you want to delete this post?</h1>
+                    <small><i>This action is irreversible.</i></small>
                     <br>
-                    <button type="submit" value="submit" name="delete_help" class="btn btn-delete">Delete Donation</button>
+                    <button type="submit" value="submit" name="delete_help" class="btn btn-delete">Delete Post</button>
                 </form>
             </div>
         </div>

@@ -30,19 +30,19 @@ endif;
                 <hr><br>
                 <form action="./login.php" method="post" class="">
                     <div class="form-item">
-                        <label for="email">Email:</label><br>
+                        <label for="email">Email</label><br>
                         <input class='' type="email" name="email" id="email" placeholder="example@email.com" autofocus>
                         <!-- <small class='text-error'>Email not verified!</small> -->
                     </div>
                     <div class="form-item">
-                        <label for="password">Password:</label><br>
-                        <input type="password" name="password" id="password" placeholder="your-password"><br>
+                        <label for="password">Password</label><br>
+                        <input type="password" name="password" id="password" placeholder="your password"><br>
                         <small id='password-error'></small>
                     </div><br>
                     <div class="form-item">
                         <button type="submit" class="btn btn-login" name='loginBtn'>Login</button>
                     </div>
-                    <small><a href="./register.php">Need an account?</a></small>
+                    <small><a href="./register.php">Not registered yet?</a></small>
                 </form>
             </div>
         </div>

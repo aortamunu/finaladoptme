@@ -20,7 +20,7 @@ include './includes/function.php';
     <div class="container">
         <?php include './partials/message.php'; ?>
         <div class="title">
-            <h1>Adoptable Pets List</h1>
+            <h1>All posts</h1>
         </div>
         <div class="data-section">
             <div class="sidebar">
