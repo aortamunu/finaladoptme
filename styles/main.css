@@ -8,7 +8,7 @@
   --secondary-red: #ff7a73;
   --meta: rgb(0, 93, 168);
   --focus-light: rgba(163, 211, 226, 0.897);
-  --primary-btn-active: #6a32aa;
+  --primary-btn-active: #af58c3;
   padding: 0px;
   margin: 0px;
   font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -62,10 +62,17 @@ input:focus,
 
 a {
   text-decoration: none;
-  color: #14a1ff;
+  color: #651e7e;
 }
-a:hover {
-  color: #046db3;
+.already a:hover {
+  color: white;
+  font-size: 15px;
+}
+
+.nav-item a:hover {
+  /* background-color: #6c0676; */
+  color: #ffffff;
+  /* font-size: 25px; */
 }
 
 .btn a {
@@ -74,6 +81,7 @@ a:hover {
 
 .input,
 input {
+  float: left;
   min-height: 3em;
   width: 100%;
   border-radius: 5px;
@@ -145,7 +153,7 @@ body {
     0 0 5px var(--secondary);
 }
 .btn-login:disabled {
-  background-color: grey;
+  background-color: rgb(101, 24, 152);
 }
 
 .alert {

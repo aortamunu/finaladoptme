@@ -24,11 +24,12 @@ if (isset($_POST['logout-btn'])) {
     <div class="container">
         <?php include './partials/message.php'; ?>
         <form action="./logout.php" method="post">
-            <div class="title">
+            <div class="boxx"><div class="title1">
                 <h1>
                     Are you sure you want to logout?
                 </h1>
                 <button class="btn btn-delete" name='logout-btn'>Logout</button>
+            </div>
             </div>
         </form>
     </div>

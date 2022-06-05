@@ -167,7 +167,7 @@ endif;
                     <label for="create-help-contact">Contact</label><br>
                     <input type="number" placeholder="Contact number" id='create-help-contact' class='' name="contact" required><br>
 
-                    <label for="create-help-active">Available</label><br>
+                    <label for="create-help-active">Active(Publish)</label>
                     <input type="checkbox" id='create-help-active' class='' value="1" name="active"><br>
 
                     <button type="submit" value="submit" name="post_help" class="btn btn-login">POST</button>

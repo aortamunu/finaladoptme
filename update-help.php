@@ -132,7 +132,7 @@ endif;
                     ?>
                     <input type="checkbox" id='create-help-active' class='' name="active" value="1" <?= $selected ?>><br>
 
-                    <button type="submit" value="submit" name="update_help" class="btn btn-edit">Update Help</button>
+                    <button type="submit" value="submit" name="update_help" class="btn btn-edit">Update</button>
                 </form>
             </div>
         </div>

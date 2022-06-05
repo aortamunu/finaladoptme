@@ -342,8 +342,8 @@ function getDonationsByUser($limit = NULL, $offset = NULL, $search = NULL, $cate
     $lim = $limit !== NULL ? $limit : 10;
     $off = $offset !== NULL ? $offset : 0;
     $search = $conn->real_escape_string($search);
-    $category = $conn->real_escape_string($category);
-    $active = $conn->real_escape_string($active);
+    // $category = $conn->real_escape_string($category);
+    // $active = $conn->real_escape_string($active);
     $frm_q = "FROM `pets` WHERE `helper_id`= $user_id ";
     $order_q = "ORDER BY `id` DESC LIMIT $lim OFFSET $off";
     $search_q = "AND (`title` LIKE \"%$search%\" OR `description` LIKE \"%$search%\") ";

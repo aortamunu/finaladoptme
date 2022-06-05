@@ -19,12 +19,12 @@ include './includes/function.php';
     <?php include("./partials/nav.php") ?>
     <div class="container">
         <div class="title">
-            <h1>Reasons to adopt animals</h1>
+            <img src = "pizap.jpg">
         </div>
         <?php include './partials/message.php'; ?>
-        <div class="youtube title">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/wWw0iQF5Za8                                             " title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+        <!-- <div class="youtube title">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/wWw0iQF5Za8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div> -->
     </div>
 
 

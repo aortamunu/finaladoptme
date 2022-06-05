@@ -47,7 +47,9 @@ endif
                     <div class="form-item">
                         <button type="submit" name='registerBtn' id='registerBtn' class="btn btn-login" disabled>Sign Up</button>
                     </div>
-                    <small><a href="./login.php">Already registered?</a></small>
+                    <div class="already">
+                    <br><small><a href="./login.php">Already registered?</a></small>
+                    </div>
                 </form>
             </div>
         </div>
