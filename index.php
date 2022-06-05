@@ -18,8 +18,37 @@ include './includes/function.php';
 <body>
     <?php include("./partials/nav.php") ?>
     <div class="container">
-        <div class="title">
-            <img src = "pizap.jpg">
+    
+            <!-- <img src = "pizap.jpg"> -->
+
+            <div class="">
+    <form class="mainss">
+    <?php
+    $input_value = isset($_GET['search']) ? $_GET['search'] : "";
+    ?>
+    <!-- <label for='search'></label> -->
+    <input type='text' name='search' class='mainsearch' placeholder='Find you a PET <3' value="<?= $input_value ?>">
+        
+    
+    <!-- <label for='category'>Select Category:</label> -->
+<select id='create-help-category' class='mainsearch' name='category'>
+    <option value=''>All Categories</option>
+    <?php
+    $categories = getCategories();
+    while ($category = $categories->fetch_assoc()) {
+        $selected = (isset($_GET['category']) && $category['id'] == $_GET['category']) ? "selected" : "";
+    ?>
+        <option value="<?= $category['id'] ?>" <?= $selected ?>><?= ($category['name']) ?></option>
+    <?php
+    }
+    ?>
+</select>
+
+
+        <button class=" btns searchbtn">
+            Search
+        </button>
+    </form>
         </div>
         <?php include './partials/message.php'; ?>
         <!-- <div class="youtube title">

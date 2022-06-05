@@ -215,6 +215,7 @@ nav {
   }
   
   .nav .menu ul li:hover a{
+    font-size: 17px;
       color: #751168;
   }
   

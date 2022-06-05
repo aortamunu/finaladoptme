@@ -85,11 +85,25 @@
   display: flex;
   flex-direction: column;
 }
+
+.mainss{
+  display: flex;
+  flex-direction: row;
+}
+
 .search-input {
-  margin: 1vh 0px;
+  /* margin-top: 10%; */
   padding: 0px 10px 0px 10px;
 }
 .search-btn {
+  margin-top: 10%;
+  background-color: #540d6b;
+  color: white;
+  font-size: medium;
+}
+
+.searchbtn {
+  margin-top: 15%;
   background-color: #540d6b;
   color: white;
   font-size: medium;

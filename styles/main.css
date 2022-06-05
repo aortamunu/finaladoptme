@@ -47,6 +47,16 @@
   cursor: pointer;
 }
 
+.btns {
+  border: 0.1rem solid #a8a8a82d;
+  padding: 1vh 1vw;
+  border-radius: 8px;
+  margin-left: 10px;
+  height: 43px;
+  max-height: 10vh;
+  cursor: pointer;
+}
+
 textarea:focus,
 input:focus,
 .input:focus,
@@ -65,8 +75,13 @@ a {
   color: #651e7e;
 }
 .already a:hover {
-  color: white;
-  font-size: 15px;
+  color: rgb(78, 12, 114);
+  font-size: 17px;
+}
+
+.notyet a:hover {
+  color: rgb(78, 12, 114);
+  font-size: 17px;
 }
 
 .nav-item a:hover {
@@ -84,20 +99,25 @@ input {
   float: left;
   min-height: 3em;
   width: 100%;
+  /* margin-top: 15px; */
+  /* margin-bottom: 20px; */
+  border-radius: 5px;
+  border: 0.1em solid rgb(131, 122, 122);
+  padding: 0px 1em 0px 1em;
+}
+
+.mainsearch{
+  justify-content: center;
+  height: 40px;
+  width: 30%;
+  margin-top: 15%;
   border-radius: 5px;
   border: 0.1em solid rgb(131, 122, 122);
   padding: 0px 1em 0px 1em;
 }
 
 body {
-  background: #a65bfc;
-  /* background-color: rgba(30, 65, 16, 0.452); */
-  /* background: linear-gradient(
-    139deg,
-    rgba(195, 46, 232, 1) 0%,
-    rgba(232, 71, 200, 1) 39%,
-    rgba(228, 95, 255, 1) 100%
-  ); */
+  background:#cccccc;
 }
 
 .textarea {
@@ -151,9 +171,11 @@ body {
 .btn-login:focus {
   box-shadow: 0px 0px 5px var(--secondary), 0 0 5px var(--secondary),
     0 0 5px var(--secondary);
+    background-color: #7e1ba2;
+    width: auto;
 }
 .btn-login:disabled {
-  background-color: rgb(101, 24, 152);
+  background-color: rgb(131, 34, 131);
 }
 
 .alert {
