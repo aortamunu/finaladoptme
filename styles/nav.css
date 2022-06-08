@@ -46,17 +46,37 @@ nav {
     margin-top: auto;
     margin-bottom: auto;
   }
+
+  .navmain{
+    display: flex;
+  }
   .nav-links {
     display: flex;
   }
-  .nav-item {
-    margin: 0px 5px;
-    padding: 1vh 2vw;
-    text-align: center;
-    top: 30%;
-    margin-top: auto;
-    margin-bottom: auto;
-    border-radius: 15px;
+
+  .nav-item{
+    margin-left: 10px;
+    display: flex;
+  }
+
+  .nav-item a{
+    display: flex;
+  }
+
+  .nav-item img{
+    top: 10px;
+    position: relative;
+    width: 30px;
+    height: 35px;
+    margin-right: 20px;
+    /* width: 4px; */
+    /* margin: 0px 5px; */
+    /* padding: 1vh 2vw; */
+    /* text-align: center; */
+    /* top: 30%; */
+    /* margin-top: auto; */
+    /* margin-bottom: auto; */
+    /* border-radius: 15px; */
   }
   .nav-link {
     font-family: cursive;
@@ -64,10 +84,10 @@ nav {
     font-size: 23px;
     color: black;
   }
-  .nav-link:hover {
+  /* .nav-link:hover {
     color: white;
     border-radius: 5px;
-  }
+  } */
   .nav-btn {
     padding: 1vh;
     text-align: center;
@@ -118,12 +138,17 @@ nav {
   }
   
   body{
-      background: #8624b0;
+    height: 100vh;
+    background-image: url('../bestbuddy.jpg');
+    background-size: cover;
+    background-position: center;
   }
+
   .nav{
-      position: fixed;
+      position: relative;
       top: 10px;
-      right: 30px;
+      right: 20px;
+      left: 6px;
   }
   
   .nav .profile{
@@ -196,7 +221,8 @@ nav {
   }
   
   .nav .menu ul li img{
-      max-width: 20px;
+      max-width: 30px;
+      height: 30px;
       margin-right: 10px;
       opacity: 0.5;
       transition: 0.5s;

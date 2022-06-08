@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,700&display=swap");
 * {
-  --primary: #a65bfc;
-  --secondary: #c099e8;
+  --primary: #8347b5;
+  --secondary: #ffffff;
   --primary-green: #227027;
   --secondary-green: #90f096;
   --primary-red: #a81b0e;
   --secondary-red: #ff7a73;
   --meta: rgb(0, 93, 168);
   --focus-light: rgba(163, 211, 226, 0.897);
-  --primary-btn-active: #af58c3;
+  --primary-btn-active: #ffffff;
   padding: 0px;
   margin: 0px;
   font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -35,6 +35,34 @@
   border-radius: 50px;
 }
 
+.findpet{
+  font-style: italic;
+  margin-top: 20px;
+  font-size: 38px;
+  color: black;
+}
+
+.findpet p{
+  align-items: center;
+  background: var(--primary);
+  font-size: 22px;
+  width: 90px;
+  color: white;
+  border: 2px solid black;
+  border-radius: 8px;
+}
+
+.findpet p:hover{
+  background: #7e1ba2;
+  font-size: 22px;
+  color: white;
+}
+
+.image img{
+    width: 900px;
+    height: 500px;
+
+}
 .container {
   padding: 100px 10rem 0px 10rem;
 }
@@ -84,11 +112,11 @@ a {
   font-size: 17px;
 }
 
-.nav-item a:hover {
-  /* background-color: #6c0676; */
+/* .nav-item a:hover {
+  background-color: #6c0676;
   color: #ffffff;
-  /* font-size: 25px; */
-}
+  font-size: 25px;
+} */
 
 .btn a {
   color: white;
@@ -107,17 +135,19 @@ input {
 }
 
 .mainsearch{
+  /* background: transparent; */
+  color: black;
   justify-content: center;
   height: 40px;
   width: 30%;
-  margin-top: 15%;
+  margin-top: 10px;
   border-radius: 5px;
   border: 0.1em solid rgb(131, 122, 122);
   padding: 0px 1em 0px 1em;
 }
 
 body {
-  background:#cccccc;
+  background-color: white;
 }
 
 .textarea {
@@ -144,6 +174,10 @@ body {
   margin: auto;
   min-width: 400px;
   max-width: max-content;
+}
+
+h5{
+  font-size: 30px;
 }
 
 .form-container {

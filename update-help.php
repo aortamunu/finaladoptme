@@ -124,7 +124,7 @@ endif;
                     <input type="text" placeholder="Location" id='create-help-location' class='' name="location" required value="<?= $help->location ?>"><br>
 
                     <label for="create-help-contact">Contact</label><br>
-                    <input type="number" placeholder="Contact number" id='create-help-contact' class='' name="contact" required value="<?= $help->contact ?>"><br>
+                    <input type="number" placeholder="Contact number" pattern="[0-9]{10} id='create-help-contact' class='' name="contact" required value="<?= $help->contact ?>"><br>
 
                     <label for="create-help-active">Available</label><br>
                     <?php

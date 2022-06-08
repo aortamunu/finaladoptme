@@ -11,8 +11,13 @@
   align-content: center;
 }
 
+h2{
+  margin-top: 200px;
+}
+
 .title h1{
   font-family: cursive;
+  color: black;
 }
 
 .title1 h1{
@@ -102,12 +107,6 @@
   font-size: medium;
 }
 
-.searchbtn {
-  margin-top: 15%;
-  background-color: #540d6b;
-  color: white;
-  font-size: medium;
-}
 .search-btn:active {
   background-color: var(--primary-btn-active);
 }

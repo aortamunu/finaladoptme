@@ -37,7 +37,7 @@ include "./includes/authentication_required.php";
                         </button>
                     </form>
                 </div>
-            </div>
+</div>
             <div class="helplist-container" autofocus>
                 <?php
                 $limit = (isset($_GET['limit']) && $_GET['limit'] != null) ? $_GET['limit'] : 10;

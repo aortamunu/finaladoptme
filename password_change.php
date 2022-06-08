@@ -31,7 +31,7 @@ if (isset($_POST['submitBtn'])) {
         <?php include './partials/message.php'; ?>
         <div class="form-container">
             <div class="form-center-on-container">
-                <h2>Change Password</h2>
+                <h5>Change Password</h5>
                 <hr><br>
                 <form action="./password_change.php" method="post" class="">
                     <div class="form-item">
