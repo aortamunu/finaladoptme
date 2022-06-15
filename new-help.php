@@ -165,7 +165,7 @@ endif;
                     <input type="text" placeholder="Location" id='create-help-location' class='' name="location" required><br>
 
                     <label for="create-help-contact">Contact</label><br>
-                    <input type="tel" placeholder="Contact number" pattern="[0-9]{10}" id='create-help-contact' class='' name="contact" required><br>
+                    <input type="number" placeholder="Contact number" pattern="[0-9]{10}" id='create-help-contact' class='' name="contact" required><br>
 
                     <label for="create-help-active">Active(Publish)</label>
                     <input type="checkbox" id='create-help-active' class='' value="1" name="active"><br>

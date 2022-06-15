@@ -22,6 +22,10 @@ include "./includes/function.php";
         
     <?php include './partials/message.php'; ?>
 
+    <div class="homephoto">
+        <img src="./allanimals.png">
+    </div>
+
     <div class="findpet">
     <h4>It's time to find perfect companion.</h4>
             <a href="./list.php" class='petfind'>

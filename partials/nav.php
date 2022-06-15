@@ -33,13 +33,18 @@
         <div class="profile" onclick="menuToggle();">
             <img src="dog.jpg">
         </div>
+
+
         <div class="menu">
             <h3><?php echo "Hello"?><?php echo " :)"?></h3>
             <ul>
                 <div class="log">
                 <li><img src="mypost.png"><a href="./my-helps.php">My posts</a></li>
+                <li><img src="care.png"><a href="./aboutus.php">ABOUT US</a></li>
                 <li><img src="changepw.png"><a href="password_change.php">Change Password</a></li>
                 <li><img src="logout.png"><a href="./logout.php">Logout</a></li>
+               
+
 
                 </div>
             </ul>

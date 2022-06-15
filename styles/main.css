@@ -35,16 +35,22 @@
   border-radius: 50px;
 }
 
+.homephoto img{
+  margin-top: -5%;
+  width: 1200px;
+  height: 500px;
+}
 .findpet{
   font-style: italic;
-  margin-top: 20px;
+  margin-top: 30px;
+  margin-left: 30px;
   font-size: 38px;
   color: black;
 }
 
 .findpet p{
   align-items: center;
-  background: var(--primary);
+  background: rgb(187, 26, 187);
   font-size: 22px;
   width: 90px;
   color: white;
@@ -53,9 +59,9 @@
 }
 
 .findpet p:hover{
-  background: #7e1ba2;
+  background: #d5c004;
   font-size: 22px;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .image img{
@@ -264,3 +270,5 @@ hr {
 #ckeditor {
   background-color: white;
 }
+
+

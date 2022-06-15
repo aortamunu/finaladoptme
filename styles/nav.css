@@ -139,7 +139,8 @@ nav {
   
   body{
     height: 100vh;
-    background-image: url('../bestbuddy.jpg');
+    background-color: rgb(152, 102, 177);
+    /* background-image: url('../bestbuddy.jpg'); */
     background-size: cover;
     background-position: center;
   }
@@ -245,7 +246,7 @@ nav {
       color: #751168;
   }
   
-  
+ 
   
   
   
