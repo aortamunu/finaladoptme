@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 05, 2022 at 05:24 AM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 8.1.6
+-- Generation Time: Jun 16, 2022 at 06:08 AM
+-- Server version: 10.4.13-MariaDB
+-- PHP Version: 7.4.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,6 +20,29 @@ SET time_zone = "+00:00";
 --
 -- Database: `adopt_me`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `adoption_request`
+--
+
+CREATE TABLE `adoption_request` (
+  `id` bigint(255) NOT NULL,
+  `pet` int(11) NOT NULL,
+  `requester` int(11) NOT NULL,
+  `message` text NOT NULL,
+  `status` int(1) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `adoption_request`
+--
+
+INSERT INTO `adoption_request` (`id`, `pet`, `requester`, `message`, `status`) VALUES
+(1, 32, 7, 'hey', 1),
+(2, 30, 1, 'i want it', 2),
+(3, 28, 1, 'will yu pease', 2);
 
 -- --------------------------------------------------------
 
@@ -45,20 +68,28 @@ CREATE TABLE `pets` (
 --
 
 INSERT INTO `pets` (`id`, `title`, `description`, `location`, `contact`, `helper_id`, `category`, `created_at`, `active`, `image`) VALUES
-(35, 'dog for adoption', '<p>2 years old kali is looking for a home</p>', 'thamel', 1234567890, 1, 5, '2022-05-26 17:15:43', 1, 'uploads/d1.jpg'),
-(36, 'cat ', '<p>6 months cat looking for home</p>', 'bhaktapur', 1235, 8, 2, '2022-05-26 19:32:29', 1, 'uploads/d2.jpg'),
-(37, 'two rats', '<p>two black and white available for adoption</p>', 'lokanthali', 2222, 8, 6, '2022-05-26 19:37:09', 1, 'uploads/d3.jpg'),
-(38, 'Misa', '<p>Brown colored puppy available for adoption. She is an active 3 months old puppy.&nbsp;</p>', 'Sitapaila', 2147483647, 9, 1, '2022-05-26 11:31:04', 1, 'uploads/dog.jpg'),
-(39, 'dog food', '<p>food for dogs</p>', 'Sitapaila', 123, 11, 1, '2022-05-26 22:53:02', 0, 'uploads/dogfood.jpg'),
-(41, 'Moco', '<p>He is a cute and very active puppy. He is not what we say normal. He is too fun to keep around. But he can be a real headache sometimes. We need a real responsible owner for him who can handle him when letting him be just him.</p>', 'Pokhara', 2147483647, 13, 1, '2022-06-04 11:11:42', 1, 'uploads/moco.jpg'),
-(42, 'Dog cage ', '<p>It is a big size dog cage. We are donating this and want fosters around to take this if they need this. We want to help fosters who work very hard to take care of rescues.</p>', 'Butwal', 2147483647, 13, 14, '2022-06-04 11:14:25', 1, 'uploads/dogcage.jpg'),
-(43, 'Pew', '<p>Female cat up for adoption.</p><p>She needs new home urgently. Her owners are going out of the country. She is a friendly cat.</p>', 'Phutung, Kathmandu', 2147483647, 13, 2, '2022-06-04 11:18:05', 1, 'uploads/Pew.jpg'),
-(44, 'Rico', '<p>Rico the Rat ;) Up for adoption!</p>', 'Satungal, Kathmandu', 2147483643, 13, 6, '2022-06-04 11:23:15', 1, 'uploads/rat.jpg'),
-(45, 'Pipo and Riroru', '<p>Both the rabbits are for adoption. Interested can kindly contact me.</p>', 'Bhaktapur', 2147483647, 13, 7, '2022-06-04 11:24:32', 1, 'uploads/rabs.jpg'),
-(46, 'Hinoku', '<p>Parrot for adoption. She is well trained. Please contact me if you are willing to take proper care of Hinoku.</p>', 'Tangal', 2147483647, 13, 16, '2022-06-04 11:29:19', 1, 'uploads/hinoku.jpg'),
-(47, 'Ivermectin', '<p>We want to contribute in your rescue work. Whoever is in need, please contact in the given number to get these meds. Thank you for working for needy animals. &lt;3</p>', 'Kathmandu', 2147483647, 13, 11, '2022-06-04 11:34:01', 1, 'uploads/iver.jpg'),
-(48, 'Adult dog food', '<p>People fostering rescue animals, you can kindly contact us if you need any help for dog foods. We will be very glad to help you. :)</p>', 'Kathmandu', 2147483647, 13, 10, '2022-06-04 11:37:15', 1, 'uploads/dogfooddonation.jpg'),
-(49, 'Pimpy', '<p>Pimpy(Monkey) is available for adoption. She is always taken care by humans. So, she is friendly with humans.</p>', 'Kalanki', 2147483647, 13, 9, '2022-06-04 11:41:03', 1, 'uploads/pimpy.jpg');
+(2, 'First Help', 'Ge', 'ktm', 98, 1, 1, '2021-09-04 12:38:21', 1, NULL),
+(3, 'First Help', 'momo', 'mo', 98, 1, 2, '2021-09-04 12:38:21', 1, NULL),
+(4, 'Timestan', 'tim3e', 'bkt', 89, 1, 1, '2021-09-04 12:38:45', 1, NULL),
+(6, 'Jacket', '', 'Kathmandu', 2147483647, 1, 2, '2021-09-06 08:57:49', 1, NULL),
+(8, 'Jacket', '  hero mero jacket tmi lagaune ho?', 'Kathmandu', 214748364, 1, 9, '2021-09-21 20:31:13', 1, NULL),
+(9, 'Jacket', ' hero is', 'Kathmandu', 2147483647, 1, 2, '2021-09-21 20:32:42', 1, NULL),
+(10, 'Jacket', '  hero is 1', 'Kathmandu', 2147483647, 1, 2, '2021-09-21 20:33:36', 1, NULL),
+(11, 'Jacket', '   hero is 1 2', 'Kathmandu', 2147483647, 1, 2, '2021-09-21 20:34:05', 1, NULL),
+(12, 'Moma', 'food    hero is 1 2 ', 'Kathmandu', 2147483647, 1, 1, '2021-09-22 07:34:53', 1, NULL),
+(13, 'Moma 123', '<p>I am momo</p>', 'Kathmandu', 214748312, 1, 2, '2021-09-22 07:42:15', 1, NULL),
+(19, 'hey', '<p><strong>born in America&nbsp;</strong></p><p>Visit my website at <a href=\"https://nischalstha9.github.io\">nischalstha9.github.io</a> I am awesome</p>', 'asd', 12, 1, 1, '2021-09-24 15:45:43', 1, NULL),
+(20, 'Niraj Karki available', '<p><strong>5 Niraj karki available at Nist COllege</strong></p><p>Niraj karki is delicious chocolate. ??</p>', 'Swoyambhu', 2147483647, 1, 5, '2021-09-24 16:20:40', 1, NULL),
+(22, 'kakshya 9 ko kitab', '<p>Mero Naam Nischal Shrestha ho</p><p>Mah kakshya 10 ma padhxu</p>', 'ktm', 200900879, 1, 8, '2021-09-24 16:25:14', 1, NULL),
+(23, 'PYTHON DJANGO INTERN', '<p>Free Django courses are available.</p>', 'public_html', 2147483647, 1, 6, '2021-09-26 14:02:56', 1, NULL),
+(24, '5 tracks are available', '<p>5 used tracks are available. If anyone want it please contact me.?</p>', 'Banasthali, Kathmandu', 2147483647, 1, 2, '2021-10-02 07:52:24', 1, NULL),
+(25, 'My awesome New help edited again', '<p>This is description of my awesome new help?</p>', 'banasthali, Kathamandu', 2147483647, 1, 5, '2021-10-03 19:49:57', 1, NULL),
+(26, 'Inaactive', '<p>ina</p>', 'don', 89, 1, 1, '2021-10-04 17:00:52', 1, NULL),
+(27, 'This is new inactive help', '<p>books is available</p>', 'ktm', 8989, 1, 1, '2021-10-04 17:12:11', 0, NULL),
+(28, 'This is my demo user\'s first help', '<p>demo demo demo</p>', 'demo ', 89, 7, 1, '2021-10-04 17:38:19', 1, NULL),
+(29, 'Nischal is awesome', '<p>done description</p><p>Nischal really is awesome!</p>', 'kathmandu ', 2147483647, 1, 8, '2021-12-11 12:56:36', 1, NULL),
+(30, 'German dog 2', '<p>dog is avaue</p>', 'ktm', 2147483647, 1, 1, '2022-05-24 11:20:07', 1, NULL),
+(32, 'image', '<p>image</p>', '123', 123, 1, 1, '2022-05-24 13:30:06', 1, 'DSC_0128.JPG');
 
 -- --------------------------------------------------------
 
@@ -77,17 +108,14 @@ CREATE TABLE `pets_category` (
 --
 
 INSERT INTO `pets_category` (`id`, `name`, `description`) VALUES
-(1, 'Dog', NULL),
-(2, 'Cat', NULL),
-(6, 'Rat', NULL),
-(7, 'Rabbit', NULL),
-(9, 'Other Pets', NULL),
-(10, 'Donation(Pet food)', NULL),
-(11, 'Donation(Pet medicines)', NULL),
-(13, 'Donation(Pet grooming items)', NULL),
-(14, 'Donation(Pet cages)', NULL),
-(15, 'Donation(Other pet items)', NULL),
-(16, 'Birds', NULL);
+(1, 'Food', NULL),
+(2, 'Clothing', NULL),
+(5, 'Consumable', NULL),
+(6, 'Electronics', NULL),
+(7, 'Books', NULL),
+(8, 'Notebooks', NULL),
+(9, 'Education Materials', NULL),
+(10, 'Technical Devices', NULL);
 
 -- --------------------------------------------------------
 
@@ -122,15 +150,18 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `email`, `password`, `active`, `email_verified`, `role`) VALUES
-(9, '', 'seemana@gmail.com', '$2y$10$wJwZE4act95pxceGix2r6OOceySX/9mn69Io5tSeG3.sHSr1dzkX.', 1, 0, 1),
-(10, '', 'bibek@gmail.com', '$2y$10$Br2VDbGwqat4j6K8MAfWu.fvs3M7i74JwAR0/V.jUmJLJ4gDrZCLu', 1, 0, 1),
-(11, '', 'heka@g.com', '$2y$10$lmAXY2zBLit15Nd2DpMfuOIpWQjyBUiBephAq1Mni5U0rTBSVceky', 1, 0, 1),
-(12, '', 'rb98@gmail.com', '$2y$10$kdoAGjFffa6Cfm5JspAvmOqkIk2CCJNEsiamEyzdIyLlu3ry1iRDO', 1, 0, 1),
-(13, '', 'a@b', '$2y$10$gf4BzTr40N3VwKslL2e22eW3enkfxdqZCoI46diU0yeks8hXEEcxG', 1, 0, 1);
+(1, '', 'nischal@g.com', '$2y$10$bTkknAdwwaVEyfyNfESHgOdJNgxMbzueJddct1hvw2krXFIWUxztW', 1, 0, 0),
+(7, '', 'demo@user.com', '$2y$10$XZtBk8xSK5QohcdjYSiHjeo6AW/PFdQ4spTK5dA2qBofgo0wEqGje', 1, 0, 1);
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `adoption_request`
+--
+ALTER TABLE `adoption_request`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `pets`
@@ -162,16 +193,22 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT for table `adoption_request`
+--
+ALTER TABLE `adoption_request`
+  MODIFY `id` bigint(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `pets`
 --
 ALTER TABLE `pets`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `pets_category`
 --
 ALTER TABLE `pets_category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `session_token`
@@ -183,7 +220,7 @@ ALTER TABLE `session_token`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'User Id', AUTO_INCREMENT=14;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'User Id', AUTO_INCREMENT=8;
 
 --
 -- Constraints for dumped tables

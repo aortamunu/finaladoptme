@@ -29,8 +29,8 @@ endif
                 <hr><br>
                 <form action="./register.php" method="post" class="">
                     <div class="form-item">
-                        <label for="email">Email</label><br>
-                        <input type="email" name="email" id="email" placeholder="example@email.com" autofocus required><br>
+                        <label for="email">Username</label><br>
+                        <input type="text" name="email" id="email" placeholder="your REAL name" autofocus required><br>
                         <!-- <small class='text-error'>Email not verified!</small> -->
                     </div>
                     <div class="form-item">

@@ -1,0 +1,4 @@
+<?php elseif ($request['status'] == 1) : ?>
+                                Request Approved Call Now!
+
+                                pending-adoptions 47

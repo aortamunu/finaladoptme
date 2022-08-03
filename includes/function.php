@@ -363,3 +363,74 @@ function getDonationsByUser($limit = NULL, $offset = NULL, $search = NULL, $cate
     $donations_count = $count_sql->get_result()->fetch_object();
     return array("results" => $donations, "count" => $donations_count->total);
 }
+
+function createRequest($pet = NULL, $msg = NULL)
+{
+
+    global $conn;
+
+    $sql = $conn->prepare('INSERT INTO adoption_request (pet, requester, message) VALUES (?, ?, ?)');
+    $sql->bind_param('iis', $pet, $_SESSION['user']['id'], $msg);
+    $sql->execute();
+    if ($sql->affected_rows > 0) {
+        $_SESSION['message'] = array('type' => 'success', 'msg' => 'Adoption Request Sent!');
+    } else {
+        $_SESSION['message'] = array('type' => 'danger', 'msg' => 'Failed to send adoption request !');
+    }
+
+    header('Location: /my-helps.php');
+    $sql->close();
+    exit();
+}
+
+function checkRequestSent($pet = NULL)
+{
+    global $conn;
+    $sql = $conn->prepare('SELECT * FROM adoption_request WHERE requester = ? AND pet=?');
+    $sql->bind_param('ii', $_SESSION['user']['id'], $pet);
+    $sql->execute();
+    $result = $sql->get_result();
+    if ($result->num_rows !== 0) {
+        return true;
+    }
+    return false;
+}
+
+function adoptionRequests()
+{
+    #lists adoption requests creted by other users
+    global $conn;
+    $sql = $conn->prepare('SELECT *,`adoption_request`.`id` as request_id FROM adoption_request INNER JOIN user ON `adoption_request`.`requester`=`user`.`id` INNER JOIN pets ON `pet`=`pets`.`id` WHERE pet in (SELECT id from pets WHERE helper_id = ?)');
+    $sql->bind_param('i', $_SESSION['user']['id']);
+    $sql->execute();
+    $result = $sql->get_result();
+    return $result;
+}
+
+function myPendingRequests()
+{
+    #lists adoption requests creted by me
+    global $conn;
+    $sql = $conn->prepare('SELECT * FROM adoption_request INNER JOIN `user` ON (SELECT helper_id FROM pets WHERE id=`adoption_request`.`pet`)=`user`.`id` WHERE requester = ?');
+    $sql->bind_param('i', $_SESSION['user']['id']);
+    $sql->execute();
+    $result = $sql->get_result();
+    return $result;
+}
+
+
+function setRequestStatus($request_id, $status)
+{
+
+    #STATUS=0=pending=1=accepted=2=rejected
+    global $conn;
+    $sql = $conn->prepare('UPDATE adoption_request SET status=? WHERE id=?');
+    $sql->bind_param('ii', $status, $request_id);
+    $sql->execute();
+    if ($sql->affected_rows > 0) {
+        return true;
+    } else {
+        var_dump($sql->error);
+    }
+    return false;
+}

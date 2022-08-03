@@ -69,6 +69,21 @@ endif;
                         </div>
                     </div>
                 </div>
+                <?php if (isAuthenticated()) : ?>
+                    <?php if (!checkRequestSent($help->id)) : ?>
+                        <form action="./send_request.php" method="post">
+                            <input type="hidden" name="pet_id" value="<?= $help->id ?>">
+                            Message: <input type="message" placeholder="Please provide your full detail. Your LOCATION is a must! Your message should be convincing to the owner of the post." name="message" value="" required>
+                            <br>
+                            <button type="submit" name="post_request">REQUEST</button>
+                        </form>
+                    <?php else : ?>
+                        Pet adoption request sent!
+                    <?php endif; ?>
+                <?php else : ?>
+                    Login to request pet for adoption!<br><br>
+                    <a class="btn btnz" href="./login.php">Login</a>
+                <?php endif; ?>
             </div>
             <div class="">
                 <h3>Related Post</h3>

@@ -30,8 +30,8 @@ endif;
                 <hr><br>
                 <form action="./login.php" method="post" class="">
                     <div class="form-item">
-                        <label for="email">Email</label><br>
-                        <input class='' type="email" name="email" id="email" placeholder="example@email.com" autofocus><br>
+                        <label for="email">Username</label><br>
+                        <input class='' type="text" name="email" id="email" placeholder="your username" autofocus><br>
                         <!-- <small class='text-error'>Email not verified!</small> -->
                     </div><br>
                     <div class="form-item">
